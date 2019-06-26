@@ -41,6 +41,15 @@ class SearchableMovieReviewsContainer extends React.Component {
     })
   }
 
+  generateResults = () => {
+    if (this.state.searchTerm === ''){
+      return null
+    } else {
+      return <MovieReviews reviews={this.state.reviews}/>
+    }
+
+  }
+
   render () {
     return(
       <div className="searchable-movie-reviews">
@@ -49,7 +58,7 @@ class SearchableMovieReviewsContainer extends React.Component {
           <button type= "submit"> Submit </button>
         </form>
           <h3>Searachable Movies</h3>
-          <MovieReviews reviews={this.state.reviews}/>
+          {this.generateResults()}
       </div>
     )
 
