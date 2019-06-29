@@ -15,7 +15,7 @@ export default class LatestMovieReviewsContainer extends Component {
       }
    }
 
-   componentWillMount() {
+   componentDidMount() {
       const NYT_API_KEY = 'EUNmC0UZCDuoKS4VAJgHT195WEPBJ6OD';
       const URL = 'https://api.nytimes.com/svc/movies/v2/reviews/all.json?'
          + `api-key=${NYT_API_KEY}`;
