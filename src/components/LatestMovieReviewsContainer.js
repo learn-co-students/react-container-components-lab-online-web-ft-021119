@@ -11,7 +11,7 @@ export default class LatestMovieReviewsContainer extends Component {
       super(props)
    
       this.state = {
-         reviews: null
+         reviews: []
       }
    }
 
@@ -22,7 +22,7 @@ export default class LatestMovieReviewsContainer extends Component {
       fetch(URL)
          .then(resp => resp.json())
          .then(reviews => {
-            this.setState({reviews})
+            this.setState({reviews: reviews})
          })
    }
    
