@@ -3,28 +3,17 @@ import React from 'react'
 
 
 
-// const MovieReviews = (props) => {
-//   debugger
-//
-//   return (
-//     <div className="review">
-//       <div className="review-list">
-//           {props.reviews.map (review =>
-//               <li>{review.headline}</li>)
-//             }
-//       </div>
-//     </div>
-//   )
-//
-// }
-const Review = ({headline}) => {
-   return ( <div className="review">{headline}</div> )
-}
+const MovieReviews = (props) => {
 
-const MovieReviews = ({reviews}) => {
-   return <div className="review-list">
-      {reviews.map(Review)}
-   </div>
+  return (
+      <div className="review-list">
+          {props.reviews.map ((review, index) =>
+              <li key={index} className="review"> {review.display_title}</li>)
+            }
+      </div>
+
+  )
+
 }
 
 
